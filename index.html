@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <!-- Bootstrap core CSS -->
+    <link href="js/bootstrap-3.3.0-dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="js/bootstrap-3.3.0-dist/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script type="application/javascript"
+            src="js/bootstrap-3.3.0-dist/dist/js/html5shiv.js"></script>
+    <script type="application/javascript"
+            src="js/bootstrap-3.3.0-dist/dist/js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .cstm-container {
+            padding: 0 0;
+        }
+
+        .box-shadow {
+            cursor: pointer;
+            box-shadow: 0 0 5px gray;
+            margin: 5px;
+            border-radius: 100%;
+            font-size: 20px;
+            padding: 10px;
+            opacity: 0.6;
+            color: gray;
+        }
+
+        .box-shadow:hover {
+            box-shadow: 0 0 15px gray;
+            opacity: 1;
+            color: cornflowerblue;
+            background-color: #dcdcdc;
+        }
+
+        .box-shadow:active {
+            box-shadow: 0 0 20px gray;
+            opacity: 1;
+            color: cornflowerblue;
+            background-color: #dcdcdc;
+        }
+
+        .toolBarPane {
+            line-height: 0;
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+        }
+
+        .mainVideoPaneParent {
+            /*background-color:#000000;*/
+            padding: 0 0;
+        }
+
+        .mainVideoPane {
+            text-align: center;
+            line-height: 500px;
+            box-shadow: 0 0 15px gray;
+            position: absolute;
+            height: 500px;
+            width: 100%;
+            background-color: #000000;
+            margin-top: -125px;
+            top: 25%;
+        }
+
+        .mainVideoPane img {
+            max-height: 500px;
+        }
+
+        .videoListPane {
+            box-shadow: 0 0 15px gray;
+            position: absolute;
+            width: 100%;
+            background-color: #f5f5f5;
+            bottom: -110px;
+            height: 110px;
+        }
+
+        .cstm-thumbnail img {
+            /*height: 100px;width: 200px;*/
+            max-height: 100px;
+            width: 140px;
+        }
+
+        .cstm-col-lg-2 {
+            width: auto;
+            padding: 0;
+        }
+    </style>
+</head>
+<body role="document">
+<div class="container cstm-container">
+    <div class="row">
+        <div class="col-lg-12 mainVideoPaneParent">
+            <div class="mainVideoPane">
+                <!--<div><img src="images/2011010551456113.jpg"></div>-->
+                <div><img src="images/5875845_550x550_0.png"></div>
+                <div class="toolBarPane" onselectstart="return false" oncontextmenu='return false'>
+                    <span class="glyphicon glyphicon-volume-off box-shadow"></span>
+                    <span class="glyphicon glyphicon-camera box-shadow"></span>
+                    <span class="glyphicon glyphicon-off box-shadow"></span>
+                    <span class="glyphicon glyphicon-eye-close box-shadow"></span>
+                    <span class="glyphicon glyphicon-menu-right box-shadow" title="隐藏"></span>
+                </div>
+                <div class="videoListPane">
+                    <div class="col-lg-2 cstm-col-lg-2">
+                        <a href="#" class="thumbnail cstm-thumbnail">
+                            <img src="images/200712311016042.jpg" alt="...">
+                        </a>
+                    </div>
+                    <div class="col-lg-2 cstm-col-lg-2">
+                        <a href="#" class="thumbnail cstm-thumbnail">
+                            <img src="images/2011010551456113.jpg" alt="...">
+                        </a>
+                    </div>
+                    <div class="col-lg-2 cstm-col-lg-2">
+                        <a href="#" class="thumbnail cstm-thumbnail">
+                            <img src="images/5875845_550x550_0.png" alt="...">
+                        </a>
+                    </div>
+                    <div class="col-lg-2 cstm-col-lg-2">
+                        <a href="#" class="thumbnail cstm-thumbnail">
+                            <img src="images/5875845_550x550_0.png" alt="...">
+                        </a>
+                    </div>
+                    <div class="col-lg-2 cstm-col-lg-2">
+                        <a href="#" class="thumbnail cstm-thumbnail">
+                            <img src="images/11111111.jpg" alt="...">
+                        </a>
+                    </div>
+                    <div class="col-lg-2 cstm-col-lg-2">
+                        <a href="#" class="thumbnail cstm-thumbnail">
+                            <img src="images/5875845_550x550_0.png" alt="...">
+                        </a>
+                    </div>
+                    <div class="col-lg-2 cstm-col-lg-2">
+                        <a href="#" class="thumbnail cstm-thumbnail">
+                            <img src="images/ce4mw54VTGal6.jpg" alt="...">
+                        </a>
+                    </div>
+                    <div class="col-lg-2 cstm-col-lg-2">
+                        <a href="#" class="thumbnail cstm-thumbnail">
+                            <img src="images/ce4mw54VTGal6.jpg" alt="...">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="application/javascript" src="js/jQuery/jQuery-1.11.1.js"></script>
+<script type="application/javascript"
+        src=js/bootstrap-3.3.0-dist/dist/js/bootstrap.min.js></script>
+<script type="application/javascript"
+        src="js/bootstrap-3.3.0-dist/dist/js/ie10-viewport-bug-workaround.js"></script>
+<script type="application/javascript" src="index.js"></script>
+</body>
+</html>
