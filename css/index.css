@@ -51,7 +51,10 @@
     color: cornflowerblue;
     background-color: #dcdcdc;
 }
-
+.videoHangup:hover{
+    color: red;
+    font-weight: 700;
+}
 .toolBarControlBelone {
     margin-right: -15px;
 }

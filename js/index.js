@@ -16,6 +16,7 @@ var initPaneSize = function () {
 var initVolumeEvt = function () {
     $("#volumeControl").click(function () {
         $(this).toggleClass("glyphicon-volume-off glyphicon-volume-up");
+        //TODO
     });
 };
 var initVideoItemEvt = function () {
