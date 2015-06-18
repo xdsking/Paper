@@ -1,0 +1,147 @@
+.cstm-container {
+    padding: 0 0;
+}
+
+.toolBarItem {
+    cursor: pointer;
+    box-shadow: 0 0 5px gray;
+    margin: 5px;
+    border-radius: 100%;
+    font-size: 20px;
+    padding: 10px;
+    opacity: 0.6;
+    color: gray;
+}
+
+.toolBarItem:hover {
+    box-shadow: 0 0 15px gray;
+    opacity: 1;
+    color: cornflowerblue;
+    background-color: #dcdcdc;
+}
+
+.toolBarItem:active {
+    box-shadow: 0 0 20px gray;
+    opacity: 1;
+    color: cornflowerblue;
+    background-color: #dcdcdc;
+}
+
+.toolBarControl {
+    cursor: pointer;
+    box-shadow: 0 0 5px gray;
+    margin: 5px;
+    border-radius: 100%;
+    font-size: 20px;
+    padding: 10px;
+    opacity: 0.6;
+    color: gray;
+}
+
+.toolBarControl:hover {
+    box-shadow: 0 0 15px gray;
+    opacity: 1;
+    color: cornflowerblue;
+    background-color: #dcdcdc;
+}
+
+.toolBarControl:active {
+    box-shadow: 0 0 20px gray;
+    opacity: 1;
+    color: cornflowerblue;
+    background-color: #dcdcdc;
+}
+
+.toolBarControlBelone {
+    margin-right: -15px;
+}
+
+.toolBarPane {
+    line-height: 0;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.mainVideoPaneParent {
+    /*background-color:#000000;*/
+    padding: 0 0;
+}
+
+.mainVideoPane {
+    text-align: center;
+    line-height: 500px;
+    box-shadow: 0 0 15px gray;
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    background-color: #000000;
+    margin-top: -125px;
+    top: 25%;
+}
+
+.mainVideoPane img {
+    max-height: 500px;
+}
+
+.videoListPane {
+    box-shadow: 0 0 15px gray;
+    position: absolute;
+    width: 100%;
+    background-color: #f5f5f5;
+    bottom: -110px;
+    height: 110px;
+}
+
+.cstm-thumbnail {
+    /*height: 100px;width: 200px;*/
+    height: 100px;
+    width: 140px;
+}
+
+.cstm-thumbnail img {
+    /*height: 100px;width: 200px;*/
+    max-height: 90px;
+}
+
+.videoItem {
+    width: auto;
+    float: left;
+    padding: 5px;
+}
+.videoItemControlPane{
+    display: none;
+    position: absolute;
+    height: 30px;
+    width: 140px;
+    opacity: 0.5;
+    background-color: #000000;
+    bottom: 5px;
+    text-align: left;
+}
+.videoItemToolBarItem {
+    float: left;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 100%;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 2px;
+    opacity: 1;
+    color: #ffffff;
+}
+
+.videoItemToolBarItem:hover {
+    opacity: 1;
+    border: 1px solid #ffffff;
+    color: cornflowerblue;
+    background-color: #000000;
+}
+
+.videoItemToolBarItem:active {
+    opacity: 1;
+    border: 1px solid #ffffff;
+    color: cornflowerblue;
+    background-color: #000000;
+}
