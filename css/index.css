@@ -73,18 +73,14 @@
 
 .mainVideoPane {
     text-align: center;
-    line-height: 500px;
     box-shadow: 0 0 15px gray;
     position: absolute;
-    height: 500px;
     width: 100%;
     background-color: #000000;
-    margin-top: -125px;
-    top: 25%;
 }
 
 .mainVideoPane img {
-    max-height: 500px;
+    max-height: 529px;
 }
 
 .videoListPane {

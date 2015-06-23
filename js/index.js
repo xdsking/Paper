@@ -1,16 +1,48 @@
 /**
  * Created by xuds on 2015/6/17.
  */
-
+//PC端移动端判断
+var IsPC = function () {
+    var flag = true;
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+};
 /**
  * @summary 初始化视频播放容器大小
  */
 var initPaneSize = function () {
     var bodyScrollHeight = document.body.scrollHeight;
-    $(".mainVideoPaneParent").css("height", bodyScrollHeight + "px");
+    //$(".mainVideoPaneParent").css("height", bodyScrollHeight + "px");
+    var top;
+    if (IsPC()) {
+        top = 80;
+    } else {
+        top = 0;
+    }
+    var videoListHeight = 110, mainVideoPaneHeight = bodyScrollHeight - top * 2 - videoListHeight;
+    $(".mainVideoPane").css({
+        "line-height": mainVideoPaneHeight + "px",
+        "height": mainVideoPaneHeight + "px",
+        "top": top + "px"
+    });
+    $(".mainVideoPane>img").css({"max-height": mainVideoPaneHeight + "px"});
     $(window).resize(function () {
         var bodyScrollHeight = document.body.scrollHeight;
-        $(".mainVideoPaneParent").css("height", bodyScrollHeight + "px");
+        //$(".mainVideoPaneParent").css("height", bodyScrollHeight + "px");
+        var top = 80, videoListHeight = 110, mainVideoPaneHeight = bodyScrollHeight - top * 2 - videoListHeight;
+        $(".mainVideoPane").css({
+            "line-height": mainVideoPaneHeight + "px",
+            "height": mainVideoPaneHeight + "px",
+            "top": top + "px"
+        });
+        $(".mainVideoPane>img").css({"max-height": mainVideoPaneHeight + "px"});
     });
 };
 var initVolumeEvt = function () {
@@ -52,8 +84,16 @@ var initToolBarControlEvt = function () {
     });
 };
 $(function () {
-    initPaneSize();
-    initToolBarControlEvt();
-    initVolumeEvt();
-    initVideoItemEvt();
+    if (IsPC()) {
+        initPaneSize();
+        initToolBarControlEvt();
+        initVolumeEvt();
+        initVideoItemEvt();
+    } else {
+        initToolBarControlEvt();
+        initVolumeEvt();
+        initVideoItemEvt();
+
+    }
+
 });
