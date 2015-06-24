@@ -18,32 +18,36 @@ var IsPC = function () {
  * @summary 初始化视频播放容器大小
  */
 var initPaneSize = function () {
-    var bodyScrollHeight = document.body.scrollHeight;
-    //$(".mainVideoPaneParent").css("height", bodyScrollHeight + "px");
+    var windowHeight = $(window).height();
+    //$(".mainVideoPaneParent").css("height", windowHeight + "px");
     var top;
     if (IsPC()) {
         top = 80;
     } else {
         top = 0;
     }
-    var videoListHeight = 110, mainVideoPaneHeight = bodyScrollHeight - top * 2 - videoListHeight;
+    var videoListHeight = 110, mainVideoPaneHeight = windowHeight - top * 2 - videoListHeight;
     $(".mainVideoPane").css({
         "line-height": mainVideoPaneHeight + "px",
         "height": mainVideoPaneHeight + "px",
         "top": top + "px"
     });
-    $(".mainVideoPane>img").css({"max-height": mainVideoPaneHeight + "px"});
-    $(window).resize(function () {
-        var bodyScrollHeight = document.body.scrollHeight;
-        //$(".mainVideoPaneParent").css("height", bodyScrollHeight + "px");
-        var top = 80, videoListHeight = 110, mainVideoPaneHeight = bodyScrollHeight - top * 2 - videoListHeight;
-        $(".mainVideoPane").css({
-            "line-height": mainVideoPaneHeight + "px",
-            "height": mainVideoPaneHeight + "px",
-            "top": top + "px"
-        });
-        $(".mainVideoPane>img").css({"max-height": mainVideoPaneHeight + "px"});
-    });
+    if(IsPC()){
+        $(window).resize(function () {
+         var windowHeight = $(window).height();
+         //$(".mainVideoPaneParent").css("height", windowHeight + "px");
+         var top = 80, videoListHeight = 110, mainVideoPaneHeight = windowHeight - top * 2 - videoListHeight;
+         $(".mainVideoPane").css({
+         "line-height": mainVideoPaneHeight + "px",
+         "height": mainVideoPaneHeight + "px",
+         "top": top + "px"
+         });
+         });
+    }else{
+        $(".videoListPane").css("padding","0 20px");
+
+    }
+
 };
 var initVolumeEvt = function () {
     $("#volumeControl").click(function () {
@@ -84,16 +88,9 @@ var initToolBarControlEvt = function () {
     });
 };
 $(function () {
-    if (IsPC()) {
-        initPaneSize();
-        initToolBarControlEvt();
-        initVolumeEvt();
-        initVideoItemEvt();
-    } else {
-        initToolBarControlEvt();
-        initVolumeEvt();
-        initVideoItemEvt();
-
-    }
+    initPaneSize();
+    initToolBarControlEvt();
+    initVolumeEvt();
+    initVideoItemEvt();
 
 });

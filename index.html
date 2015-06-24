@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 是否启用 WebApp 全屏模式 -->
     <title></title>
     <!-- Bootstrap core CSS -->
     <link href="js/bootstrap-3.3.0-dist/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +28,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 mainVideoPaneParent">
             <div class="mainVideoPane">
                 <!--<div><img src="images/2011010551456113.jpg"></div>-->
-                <div><img src="images/5875845_550x550_0.png"></div>
+                <!--<div><img src="images/5875845_550x550_0.png"></div>-->
                 <div class="toolBarPane" onselectstart="return false" oncontextmenu='return false'>
                     <span id="volumeControl" class="glyphicon glyphicon-volume-off toolBarItem"></span>
                     <span class="glyphicon glyphicon-camera toolBarItem" title="截图"></span>
@@ -37,77 +38,97 @@
                     <span class="glyphicon glyphicon-menu-right toolBarControl" title="隐藏功能菜单"></span>
                 </div>
                 <div class="videoListPane" onselectstart="return false" oncontextmenu='return false'>
-                    <div class="videoItem">
-                        <div class="videoItemControlPane">
-                            <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
-                            <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                    <div class="videoList">
+                        <div class="videoItem">
+                            <div class="videoItemControlPane">
+                                <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
+                                <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                            </div>
+                            <a href="#" class="thumbnail cstm-thumbnail">
+                                <img src="images/200712311016042.jpg" alt="...">
+                            </a>
                         </div>
-                        <a href="#" class="thumbnail cstm-thumbnail">
-                            <img src="images/200712311016042.jpg" alt="...">
-                        </a>
-                    </div>
-                    <div class="videoItem">
-                        <div class="videoItemControlPane">
-                            <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
-                            <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                        <div class="videoItem">
+                            <div class="videoItemControlPane">
+                                <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
+                                <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                            </div>
+                            <a href="#" class="thumbnail cstm-thumbnail">
+                                <img src="images/2011010551456113.jpg" alt="...">
+                            </a>
                         </div>
-                        <a href="#" class="thumbnail cstm-thumbnail">
-                            <img src="images/2011010551456113.jpg" alt="...">
-                        </a>
-                    </div>
-                    <div class="videoItem">
-                        <div class="videoItemControlPane">
-                            <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
-                            <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                        <div class="videoItem">
+                            <div class="videoItemControlPane">
+                                <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
+                                <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                            </div>
+                            <a href="#" class="thumbnail cstm-thumbnail">
+                                <img src="images/5875845_550x550_0.png" alt="...">
+                            </a>
                         </div>
-                        <a href="#" class="thumbnail cstm-thumbnail">
-                            <img src="images/5875845_550x550_0.png" alt="...">
-                        </a>
-                    </div>
-                    <div class="videoItem">
-                        <div class="videoItemControlPane">
-                            <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
-                            <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                        <div class="videoItem">
+                            <div class="videoItemControlPane">
+                                <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
+                                <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                            </div>
+                            <a href="#" class="thumbnail cstm-thumbnail">
+                                <img src="images/5875845_550x550_0.png" alt="...">
+                            </a>
                         </div>
-                        <a href="#" class="thumbnail cstm-thumbnail">
-                            <img src="images/5875845_550x550_0.png" alt="...">
-                        </a>
-                    </div>
-                    <div class="videoItem">
-                        <div class="videoItemControlPane">
-                            <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
-                            <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                        <div class="videoItem">
+                            <div class="videoItemControlPane">
+                                <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
+                                <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                            </div>
+                            <a href="#" class="thumbnail cstm-thumbnail">
+                                <img src="images/11111111.jpg" alt="...">
+                            </a>
                         </div>
-                        <a href="#" class="thumbnail cstm-thumbnail">
-                            <img src="images/11111111.jpg" alt="...">
-                        </a>
-                    </div>
-                    <div class=" videoItem">
-                        <div class="videoItemControlPane">
-                            <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
-                            <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                        <div class=" videoItem">
+                            <div class="videoItemControlPane">
+                                <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
+                                <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                            </div>
+                            <a href="#" class="thumbnail cstm-thumbnail">
+                                <img src="images/5875845_550x550_0.png" alt="...">
+                            </a>
                         </div>
-                        <a href="#" class="thumbnail cstm-thumbnail">
-                            <img src="images/5875845_550x550_0.png" alt="...">
-                        </a>
-                    </div>
-                    <div class="videoItem">
-                        <div class="videoItemControlPane">
-                            <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
-                            <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                        <div class="videoItem">
+                            <div class="videoItemControlPane">
+                                <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
+                                <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                            </div>
+                            <a href="#" class="thumbnail cstm-thumbnail">
+                                <img src="images/ce4mw54VTGal6.jpg" alt="...">
+                            </a>
                         </div>
-                        <a href="#" class="thumbnail cstm-thumbnail">
-                            <img src="images/ce4mw54VTGal6.jpg" alt="...">
-                        </a>
-                    </div>
-                    <div class="videoItem">
-                        <div class="videoItemControlPane">
-                            <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
-                            <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                        <div class="videoItem">
+                            <div class="videoItemControlPane">
+                                <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
+                                <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                            </div>
+                            <a href="#" class="thumbnail cstm-thumbnail">
+                                <img src="images/ce4mw54VTGal6.jpg" alt="...">
+                            </a>
                         </div>
-                        <a href="#" class="thumbnail cstm-thumbnail">
-                            <img src="images/ce4mw54VTGal6.jpg" alt="...">
-                        </a>
+                        <div class="videoItem">
+                            <div class="videoItemControlPane">
+                                <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
+                                <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                            </div>
+                            <a href="#" class="thumbnail cstm-thumbnail">
+                                <img src="images/ce4mw54VTGal6.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="videoItem">
+                            <div class="videoItemControlPane">
+                                <span class="glyphicon glyphicon-volume-off videoItemToolBarItem videoItemToolBarVolumeItem"></span>
+                                <span class="glyphicon glyphicon-fullscreen videoItemToolBarItem"></span>
+                            </div>
+                            <a href="#" class="thumbnail cstm-thumbnail">
+                                <img src="images/ce4mw54VTGal6.jpg" alt="...">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -123,5 +144,7 @@
         src="js/bootstrap-3.3.0-dist/dist/js/ie10-viewport-bug-workaround.js"></script>
 <script type="application/javascript"
         src="js/index.js"></script>
+<script type="application/javascript"
+        src="js/hideAddressBar.js"></script>
 </body>
 </html>
