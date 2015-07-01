@@ -14,7 +14,8 @@ body {
     font-size: 20px;
     padding: 10px;
     opacity: 0.6;
-    color: gray;
+    /*color: gray;*/
+    color: cornflowerblue;
 }
 
 .toolBarItem:hover {
@@ -56,11 +57,13 @@ body {
     background-color: #dcdcdc;
 }
 
-.videoHangup:hover {
+.videoHangup {
     color: red;
     font-weight: 700;
 }
-
+.videoHangup:hover {
+    color: red;
+}
 .toolBarControlBelone {
     margin-right: -15px;
 }
