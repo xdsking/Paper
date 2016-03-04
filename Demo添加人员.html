@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style rel="stylesheet" type="text/css">
+        .cstm-modal-body {
+            height: 400px;
+        }
+
+        .cstm-list-pane {
+            height: 340px;
+            overflow: auto;
+        }
+    </style>
+    <link href="../CDN/lib/bootstrap-3.3.0-dist/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<button type="button" class="btn btn-primary modal-pane-controler" data-toggle="modal">添加人员
+</button>
+<div id="modalPane" class="modal fade bs-example-modal-sm" data-backdrop="static" tabindex="-1" role="dialog"
+     aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">添加人员</h4>
+            </div>
+            <div class="modal-body cstm-modal-body">
+                <div class="container-fluid">
+                    <div class="row" style="margin-bottom: 5px;">
+                        <div class="col-lg-2" style="line-height: 30px;font-weight: 600;">源列表：</div>
+                        <div class="col-lg-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="查询关键字...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <span class="glyphicon glyphicon-search" title="查询" aria-hidden="true"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-2" style="line-height: 30px;font-weight: 600;">目标员列表：</div>
+                        <div class="col-lg-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="查询关键字...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <span class="glyphicon glyphicon-search" title="查询" aria-hidden="true"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="panel panel-default">
+                                <div class="panel-body cstm-list-pane">
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item">Cras justo odio</a>
+                                        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                                        <a href="#" class="list-group-item">Morbi leo risus</a>
+                                        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                                        <a href="#" class="list-group-item">Vestibulum at eros</a>
+                                        <a href="#" class="list-group-item">Cras justo odio</a>
+                                        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                                        <a href="#" class="list-group-item">Morbi leo risus</a>
+                                        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                                        <a href="#" class="list-group-item">Vestibulum at eros</a>
+                                        <a href="#" class="list-group-item">Cras justo odio</a>
+                                        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                                        <a href="#" class="list-group-item">Morbi leo risus</a>
+                                        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                                        <a href="#" class="list-group-item">Vestibulum at eros</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="panel panel-default">
+                                <div class="panel-body cstm-list-pane">
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item">Cras justo odio</a>
+                                        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                                        <a href="#" class="list-group-item">Morbi leo risus</a>
+                                        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                                        <a href="#" class="list-group-item">Vestibulum at eros</a>
+                                        <a href="#" class="list-group-item">Cras justo odio</a>
+                                        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                                        <a href="#" class="list-group-item">Morbi leo risus</a>
+                                        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                                        <a href="#" class="list-group-item">Vestibulum at eros</a>
+                                        <a href="#" class="list-group-item">Cras justo odio</a>
+                                        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                                        <a href="#" class="list-group-item">Morbi leo risus</a>
+                                        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                                        <a href="#" class="list-group-item">Vestibulum at eros</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="closeModalPane" type="button" class="btn btn-default">关闭</button>
+                <button id="submitModalPane" type="button" class="btn btn-primary">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../CDN/lib/jQuery/jQuery-1.11.1.js"></script>
+<script src="../CDN/lib/bootstrap-3.3.0-dist/dist/js/bootstrap.min.js"></script>
+<script src="js/test.js"></script>
+<script type="application/javascript">
+    $(function () {
+        var modalPane = $("#modalPane");
+        //打开模态窗口
+        $(".modal-pane-controler").click(function () {
+            var options = {
+                keyboard: false
+            };
+            modalPane.modal(options);
+        });
+        //关闭模态窗口
+        $("#closeModalPane").click(function () {
+            var confirmFlag = confirm("确认关闭？");
+            if (confirmFlag) {
+                modalPane.modal("hide");
+            }
+        });
+        //提交数据
+        $("#submitModalPane").click(function () {
+            modalPane.modal("hide");
+            console.log("提交数据！");
+            //TODO
+        });
+    });
+</script>
+</body>
+</html>
