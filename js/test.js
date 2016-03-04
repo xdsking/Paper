@@ -68,5 +68,5 @@ var data=[
     }
 ];
 $(function(){
-    
+
 });
