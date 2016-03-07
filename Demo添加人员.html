@@ -3,6 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <link href="../CDN/lib/bootstrap-3.3.0-dist/dist/css/bootstrap.min.css" rel="stylesheet">
     <style rel="stylesheet" type="text/css">
         .cstm-modal-body {
             height: 400px;
@@ -21,7 +22,6 @@
         }
 
     </style>
-    <link href="../CDN/lib/bootstrap-3.3.0-dist/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <button type="button" class="btn btn-primary modal-pane-controler" data-toggle="modal">添加人员
@@ -41,9 +41,9 @@
                         <div class="col-lg-2" style="line-height: 30px;font-weight: 600;">源列表：</div>
                         <div class="col-lg-4">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="查询关键字...">
+                                <input id="sourceKeyWord" type="text" class="form-control" placeholder="查询关键字...">
                                 <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
+                                    <button id="sourceSearch" class="btn btn-default" type="button">
                                         <span class="glyphicon glyphicon-search" title="查询" aria-hidden="true"></span>
                                     </button>
                                 </span>
@@ -52,9 +52,9 @@
                         <div class="col-lg-2" style="line-height: 30px;font-weight: 600;">目标列表：</div>
                         <div class="col-lg-4">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="查询关键字...">
+                                <input id="aimKeyWord" type="text" class="form-control" placeholder="查询关键字...">
                                 <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
+                                    <button id="aimSearch" class="btn btn-default" type="button">
                                         <span class="glyphicon glyphicon-search" title="查询" aria-hidden="true"></span>
                                     </button>
                                 </span>
@@ -65,77 +65,7 @@
                         <div class="col-lg-6">
                             <div class="panel panel-default">
                                 <div class="panel-body cstm-list-pane">
-                                    <div class="list-group">
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-primary cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-plus cstm-glyphicon"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-primary cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-plus cstm-glyphicon"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-primary cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-plus cstm-glyphicon"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-primary cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-plus cstm-glyphicon"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-primary cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-plus cstm-glyphicon"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-primary cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-plus cstm-glyphicon"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-primary cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-plus cstm-glyphicon"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-primary cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-plus cstm-glyphicon"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-primary cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-plus cstm-glyphicon"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-primary cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-plus cstm-glyphicon"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
+                                    <div id="sourceDataList" class="list-group">
                                     </div>
                                 </div>
                             </div>
@@ -143,70 +73,7 @@
                         <div class="col-lg-6">
                             <div class="panel panel-default">
                                 <div class="panel-body cstm-list-pane">
-                                    <div class="list-group">
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-warning cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-minus"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-warning cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-minus"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-warning cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-minus"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-warning cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-minus"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-warning cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-minus"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-warning cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-minus"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-warning cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-minus"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-warning cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-minus"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
-                                        <a href="#" class="list-group-item">Cras justo odio
-                                            <button type="button" class="btn btn-warning cstm-list-item"
-                                                    aria-label="Left Align">
-                                                <span class="glyphicon glyphicon-minus"
-                                                      aria-hidden="true"></span>
-                                            </button>
-                                        </a>
+                                    <div id="aimDataList" class="list-group">
                                     </div>
                                 </div>
                             </div>
@@ -224,30 +91,5 @@
 <script src="../CDN/lib/jQuery/jQuery-1.11.1.js"></script>
 <script src="../CDN/lib/bootstrap-3.3.0-dist/dist/js/bootstrap.min.js"></script>
 <script src="js/test.js"></script>
-<script type="application/javascript">
-    $(function () {
-        var modalPane = $("#modalPane");
-        //打开模态窗口
-        $(".modal-pane-controler").click(function () {
-            var options = {
-                keyboard: false
-            };
-            modalPane.modal(options);
-        });
-        //关闭模态窗口
-        $("#closeModalPane").click(function () {
-            var confirmFlag = confirm("确认关闭？");
-            if (confirmFlag) {
-                modalPane.modal("hide");
-            }
-        });
-        //提交数据
-        $("#submitModalPane").click(function () {
-            modalPane.modal("hide");
-            console.log("提交数据！");
-            //TODO
-        });
-    });
-</script>
 </body>
 </html>
